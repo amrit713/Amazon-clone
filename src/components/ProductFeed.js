@@ -9,7 +9,8 @@ function ProductFeed({products}) {
               
             {
                 products.slice(0,4).map(({id, title,image,price, description, category })=>{
-                   return <Product key={id} title={title} price={price} image={image} description={description} category={category}/>
+                    const convertedPrice = price *116.44;
+                   return <Product key={id} title={title} price={convertedPrice} image={image} description={description} category={category}/>
                 })
             }
 
@@ -18,14 +19,18 @@ function ProductFeed({products}) {
             <div className="md:col-span-2">
             {
                 products.slice(4,5).map(({id, title,image,price, description, category })=>{
-                   return <Product key={id} title={title} price={price} image={image} description={description} category={category}/>
+                    const convertedPrice = price *116.44;
+                   return <Product key={id} title={title} price={convertedPrice} image={image} description={description} category={category}/>
                 })
             }
             </div>
 
             {
+                
                 products.slice(5,products.length).map(({id, title,image,price, description, category })=>{
-                   return <Product key={id} title={title} price={price} image={image} description={description} category={category}/>
+                    const convertedPrice = price *116.44;
+                    
+                   return <Product key={id} title={title} price={convertedPrice} image={image} description={description} category={category}/>
                 })
             }
             
